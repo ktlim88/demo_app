@@ -39,6 +39,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
+gem 'therubyracer', platforms:  :ruby
+gem 'execjs'
+
+
 group :production do
 	gem 'pg', '0.12.2'
 end
