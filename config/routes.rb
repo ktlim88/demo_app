@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :microposts
+
+  resources :users
+
+
+#devise_for :users    
+match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
+#match 'users/:id' => 'users#show', as: :user
+#resources :users
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
