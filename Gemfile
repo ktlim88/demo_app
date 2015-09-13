@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '1.3.10'
+gem 'sqlite3' , :group => [:development, :test]
 
 # use postgres for heroku
 # gem 'pg'
@@ -31,6 +31,7 @@ gem 'protected_attributes'
 
 # Gem needed in production at Heroku
 group :production do
+	gem 'thin'
 	gem 'pg', '0.12.2'
 end
 
